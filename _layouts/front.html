@@ -3,20 +3,41 @@ layout: default
 ---
 <div class="front-hero clearfix">
     <div class="front-hero-wrapper clearfix">
-    {% for front_hero in page.front_hero %}
-    <div class="slide">
-    <h3>{{front_hero.title}}</h3>
-    <img src="{{front_hero.image}}" alt="{{front_hero.title}}">
-    </div>
-    {% endfor %}
+        {% for front_hero in page.front_hero %}
+        <div class="slide">
+            <h3>{{front_hero.title}}</h3>
+            <img src="{{front_hero.image}}" alt="{{front_hero.title}}">
+        </div>
+        {% endfor %}
     </div>
 </div>
 <div class="content-bg clearfix">
     <div class="subpage clearfix">
         <div class="white-bg">
 
-            <p>Coming Soon</p>
+            <form action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&amount={{page.stripe.price}}&description={{page.stripe.description}}" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{page.stripe.public_key}}" data-amount="{{page.stripe.price}}" data-name="CHAMP - Dontation" data-description="{{page.stripe.description}}" data-label="{{page.stripe.button_label}}"
+                    data-zip-code="true" 
+                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png" 
+                    data-locale="auto" 
+                    data-allow-remember-me="false">
+                </script>
+                <div class="u-field-radio-group" data-test="radio-group">
+                <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
+                <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="10">
+                <div class="u-field-radio-group-label RadioGroup-label-11R4u">$10.00</div>
+                </label>
+
+                </div>
+            </form>
+            <div id="stripe-message-success">{{page.stripe.success_message}}</div>
+            <div id="stripe-message-fail">{{page.stripe.failure_message}}</div>
 
         </div>
     </div>
 </div>
+
+var a = $('#mydiv').data('myval'); //getter
+$('#mydiv').attr("data-myval","20"); //setter
+champ-donate
+brentrobbins-champ-donate.slsgateway.com
