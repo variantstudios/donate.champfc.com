@@ -15,10 +15,10 @@ layout: default
     <div class="subpage clearfix">
         <div class="white-bg">
 
-            <form action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&description={{page.stripe.description}}&amount={{page.stripe.price}}" method="POST">
+            <form id="stripeForm" action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&description={{page.stripe.description}}&amount={{page.stripe.price}}" method="POST">
                 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
                 data-key="{{page.stripe.public_key}}" 
-                data-amount="2500" 
+                data-amount= 
                 data-name="CHAMP" 
                 data-description="{{page.stripe.description}}" 
                 data-label="{{page.stripe.button_label}}"
