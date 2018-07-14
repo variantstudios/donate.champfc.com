@@ -1,0 +1,23 @@
+.gsc-control-cse {
+    background: none;
+    border: none;
+    table td {
+        padding: 0;
+    }
+    input[type=text] {
+        border: none !important;
+    }
+    gsc-input.input[type=text] {
+        border: none !important;
+    }
+    .gsc-search-box-tools .gsc-search-box .gsc-input {
+        padding: 0 .5rem 0 0 !important;
+        background: none !important;
+        margin: 10px !important;
+    }
+    .gsc-search-button-v2 {
+        background: $color-two;
+        border: none;
+        padding: 11px 27px;
+    }
+}

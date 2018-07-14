@@ -1,0 +1,12 @@
+.board {
+    display: flex;
+    .board-wrapper {
+        flex: 1;
+        ul {
+            padding: 0;
+            li {
+                display: block;
+            }
+        }
+    }
+}

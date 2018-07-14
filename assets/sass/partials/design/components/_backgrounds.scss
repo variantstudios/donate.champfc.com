@@ -1,0 +1,24 @@
+.background {
+    padding: 15rem 0 2rem 0;
+    margin: 0;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.subpage {
+    margin: 0 auto 2rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+.content-bg {
+    background: #F4F4F4;
+    .subpage {
+        background: #fff;
+        margin: 2rem auto;
+    }
+}

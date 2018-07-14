@@ -1,0 +1,19 @@
+.wrap {
+    @include clearfix;
+    max-width: $container_width;
+    margin: 0 auto;
+    padding: 0;
+}
+
+main {
+    @include clearfix;
+    padding: 2em 0;
+}
+
+.mainfront-wrapper {
+    margin: 111px auto 0 auto;
+    //display: none;
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        // display: block;
+    }
+}

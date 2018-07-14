@@ -1,0 +1,99 @@
+body.front .footer-wrapper-top,
+body.not-front .footer-wrapper-top {
+    background-color: #424448;
+    color: #fff;
+    .subpage {
+        background: none;
+        margin: 0 auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .footer-inner.clearfix.container-padding-medium {
+        padding-bottom: 0;
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            //padding-bottom: 2rem;
+        }
+    }
+    .footer-inner {
+        margin: 1rem auto;
+        span {
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+        .left {
+            font-size: .8rem;
+            @include breakpoint($bp-medium, $no-query: ".no-mq") {
+                @include grid-span(6, 1, $gutter: 0);
+                text-align: left;
+            }
+            text-align: center;
+        }
+        .right {
+            margin-top: .5rem;
+            a img {
+                transform: scale(.7);
+            }
+            @include breakpoint($bp-medium, $no-query: ".no-mq") {
+                @include grid-span(6, 7, $gutter: 0);
+                margin-top: 0;
+                text-align: right;
+                a img {
+                    transform: scale(1);
+                }
+            }
+            text-align: center;
+        }
+    }
+    .lb {
+        display: block;
+    }
+}
+
+body.front .footer-wrapper-bottom,
+body.not-front .footer-wrapper-bottom {
+    background-color: #232426;
+    text-align: center;
+    .subpage {
+        background: none;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .footer-inner.clearfix.container-padding-medium {
+        padding-bottom: 0;
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            //padding-bottom: 2rem;
+        }
+    }
+    .footer-inner {
+        span {
+            color: #fff;
+            a {
+                color: #fff;
+            }
+        }
+        .left {
+            font-size: .8rem;
+            @include breakpoint($bp-medium, $no-query: ".no-mq") {
+                @include grid-span(6, 1, $gutter: 0);
+                text-align: left;
+            }
+            text-align: center;
+        }
+        .right {
+            font-size: .8rem;
+            @include breakpoint($bp-medium, $no-query: ".no-mq") {
+                @include grid-span(6, 7, $gutter: 0);
+                text-align: right;
+            }
+            text-align: center;
+        }
+    }
+}
+
+.lb {
+    display: block;
+}

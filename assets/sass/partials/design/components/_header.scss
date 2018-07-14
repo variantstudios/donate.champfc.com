@@ -1,0 +1,98 @@
+header.siteheader {
+    max-width: 1200px;
+    background: #fff;
+    padding: 0;
+    //padding: 0 2rem;
+    .header-wrap {
+        position: relative;
+    }
+    @include breakpoint($bp-medium, $no-query: ".no-mq") {
+        padding: 1rem 2rem;
+        background: none;
+    }
+    @include breakpoint($bp-xlarge, $no-query: ".no-mq") {
+        padding: 1rem 0;
+    }
+    .logo {
+        //text-align: center;
+        // transform: scale(.75);
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            @include grid-span(4, 1, $gutter: 0);
+        }
+    }
+    .main-nav {
+        width: 100%;
+        float: none;
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            @include grid-span(8, 5, $gutter: 0);
+        }
+    }
+    span.tel {
+        font-weight: 700;
+        font-size: 1.1rem;
+        display: block;
+        width: 100%;
+        background: $color-two;
+        color: #fff;
+        padding: 0 0 0 .8rem;
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            padding: 0;
+            display: block;
+            color: $color-two;
+            position: absolute;
+            right: 0;
+            top: -12px;
+            background: none;
+            width: auto;
+            a {
+                text-decoration: none;
+                color: $color-two;
+            }
+        }
+    }
+}
+
+#site-header {
+    padding: 0 0 0 0;
+    //background: $header-bg;
+    width: 100%;
+    //z-index: 2;
+    transition: all .5s ease;
+    //box-shadow: 5px 0px 20px 0 rgba(0, 0, 0, .1);
+    @include breakpoint($bp-medium, $no-query: ".no-mq") {
+        //padding: 1rem 1rem 0 1rem;
+        //box-shadow: none;
+        &.smaller {
+            height: 100px;
+            transition: all .5s ease;
+            //padding: .5rem 0 0 0;
+            box-shadow: 5px 0px 20px 0 rgba(0, 0, 0, .1);
+            .logo {
+                transition: all .5s ease;
+                transform: scale(.7);
+            }
+            .main-nav {
+                //margin-top: -25px;
+                transition: all .5s ease;
+            }
+            .main-nav>ul.menu>li {
+                padding-top: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+                transition: all .5s ease;
+                @include breakpoint($bp-medium, $no-query: ".no-mq") {
+                    margin-top: -5px;
+                }
+            }
+            .main-nav>ul.menu>:last-child {
+                @include breakpoint($bp-medium, $no-query: ".no-mq") {
+                    margin-top: 0px;
+                }
+            }
+        }
+    }
+}

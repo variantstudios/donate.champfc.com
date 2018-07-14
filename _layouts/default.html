@@ -1,0 +1,27 @@
+--- 
+layout: compress 
+---
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+{% include head.html page_title=page.search_engine_optimization.page_title page_description=page.search_engine_optimization.page_description share_image_path=page.search_engine_optimization.share_image_path url=page.url layout=page.layout %}
+
+<body class="{% if page.layout == 'front' %}front{% else %}not-front{% endif %} {% if page.is_post %}post{% endif %} {{ page.url | slugify }} {% if page.body_class %}{{page.body_class}}{% endif %} {% if layout.body_class %}{{layout.body_class}}{% endif %}">
+    {% comment %}{% include_cached browserupgrade.html %}{% endcomment %} {% include_cached header.html group=page.group url=page.url %} {% if page.layout != 'front' %}
+    <div class="main-wrapper clearfix">
+        {{ content }}
+    </div>
+    {% else %} {{ content }} {% endif %}
+
+    <div class="footer-wrapper-bottom clearfix">
+        {% include_cached footer-bottom.html %}
+    </div>
+    {% include_cached scripts.html layout=page.layout class=page.class google_analytics_tracking_id=site.google_analytics_tracking_id %}
+</body>
+
+</html>

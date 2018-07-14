@@ -1,0 +1,22 @@
+<div class="assets">
+    {% assign gys_company = page._gys_company %} {% for asset in site.assets %} {% if asset.gys_companies contains gys_company %}
+    <div class="asset">
+        <div itemscope itemtype="http://schema.org/LocalBusiness" class="address">
+            <h3><span itemprop="name">{{asset.title}}</span></h3>
+            <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                <span class="streetAddress" itemprop="streetAddress">{{asset.location.address}}</span>
+                <span class="addressLocality" itemprop="addressLocality">{{asset.location.city}}</span>,
+                <span class="addressRegion" itemprop="addressRegion">{{asset.location.state}}</span>
+                <span addressZipcode="postalCode" itemprop="postalCode">{{asset.location.zipcode}}</span>
+            </div>
+        </div>
+
+        <span class="details">
+            {%if asset.net_rentable_sq_ft%}<p class="net_rentable_sq_ft">{{asset.net_rentable_sq_ft}} Net Rentable Sq Ft</p>{%endif%}
+            {%if asset.units%}<p class="units">{{asset.units}} Units</p>{%endif%}
+            {%if asset.website_url%}<p class="website_url"><a href="{{asset.website_url}}" target="_blank" title="{{asset.title}} website">website
+            </a></p>{%endif%}
+        </span>
+    </div>
+    {% endif %} {% endfor %}
+</div>

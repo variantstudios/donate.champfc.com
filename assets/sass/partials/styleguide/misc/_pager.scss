@@ -1,0 +1,30 @@
+ul.pager {
+    margin: 1em 0 0;
+    padding: 1em 0 0;
+    // border-top: 1px solid lighten($color-two, 5%);
+    text-align: center;
+    @include breakpoint($bp-medium, $no-query: ".no-mq") {
+        display: flex;
+    }
+    li {
+        display: inline-block;
+        list-style: none;
+        color: $link;
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            flex: 1;
+        }
+        a:visited {
+            color: $link;
+        }
+        @include breakpoint($bp-medium, $no-query: ".no-mq") {
+            &.previous {
+                text-align: left;
+                padding: 1rem 0 1rem 1rem;
+            }
+            &.next {
+                text-align: right;
+                padding: 1rem 1rem 1rem 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+<aside class="sidebar sticky">
+        <div class="toc"></div>
+        <div class="sidebar-logos">
+            {% if page._gys_company == 'development' %}
+            <a href="/property-management/" class="gys-logo"><img src="/assets/images/logos/gys-llc-logo.svg" alt="GYS Property Management"></a> 
+            <a href="/general-contracting/" class="gys-logo"><img src="/assets/images/logos/gys-gc-logo.svg" alt="GYS General Contracting"></a> 
+            {% elsif page._gys_company == 'property-management' %}
+            <a href="/development/" class="gys-logo"><img src="/assets/images/logos/gys-dev-logo.svg" alt="GYS Development"></a> 
+            <a href="/general-contracting/" class="gys-logo"><img src="/assets/images/logos/gys-gc-logo.svg" alt="GYS General Contracting"></a> 
+            {% elsif page._gys_company == 'general-contracting' %}
+            <a href="/development/" class="gys-logo"><img src="/assets/images/logos/gys-dev-logo.svg" alt="GYS Development"></a> 
+            <a href="/property-management/" class="gys-logo"><img src="/assets/images/logos/gys-llc-logo.svg" alt="GYS Property Management"></a> 
+            {% else %}
+            <a href="/development/" class="gys-logo"><img src="/assets/images/logos/gys-dev-logo.svg" alt="GYS Development"></a> 
+            <a href="/property-management/" class="gys-logo"><img src="/assets/images/logos/gys-llc-logo.svg" alt="GYS Property Management"></a> 
+            <a href="/general-contracting/" class="gys-logo"><img src="/assets/images/logos/gys-gc-logo.svg" alt="GYS General Contracting"></a> 
+            {% endif %}
+        </div>
+</aside>

@@ -1,0 +1,17 @@
+.logo {
+    // transform: scale(.7);
+    @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        // transform: scale(1);
+    }
+    transition: all .5s ease;
+    img {
+        display: block;
+        margin: 1rem auto;
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            margin: 0;
+        }
+        @include breakpoint($bp-large, $no-query: '.no-mq') {
+            margin: 0;
+        }
+    }
+}

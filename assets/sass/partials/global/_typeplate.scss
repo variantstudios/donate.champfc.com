@@ -1,0 +1,38 @@
+// $BaseType
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$font-weight: normal;
+$line-height: 1.65;
+$mobile-font-size: 100;
+$mobile-font-base: 16 * ($mobile-font-size/100);
+$font-size: 112.5; // percentage value (16 * 112.5% = 18px)
+$font-base: 16 * ($font-size/100); // converts our percentage to a pixel value
+$font-family: 'PT Sans',
+Helvetica,
+Arial,
+sans-serif;
+$font-secondary: 'PT Sans',
+Helvetica,
+Arial,
+sans-serif;
+$heading-font-family: 'PT Sans',
+Helvetica,
+Arial,
+sans-serif;
+// $Paragraphs
+$indent-val: 1.5em;
+// Paragraph Styling Boolean
+$paragraph-vertical-whitespace: false;
+// $Icon-Font-Helper
+$icon-fonts: null;
+// $Pull-Quotes
+$pull-quote-fontsize: 4em;
+$pull-quote-opacity: 0.5;
+$pull-quote-color: #141413;
+// $Citation
+$cite-display: block;
+$cite-text-align: right;
+$cite-font-size: inherit;

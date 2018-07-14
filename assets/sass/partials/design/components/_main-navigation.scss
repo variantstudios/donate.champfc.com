@@ -1,0 +1,193 @@
+.main-nav {
+    margin: 1rem 0 0 0;
+    //position: relative;
+    #menu-btn,
+    .navicon {
+        display: none;
+    }
+    @include breakpoint($bp-medium-down, $no-query: ".no-mq") {
+        &>input {
+            display: none;
+        }
+        .menu-icon {
+            cursor: pointer;
+            display: block;
+            padding: 16px 16px;
+            position: relative;
+            user-select: none;
+            margin-top: -14px;
+            //width: 100%;
+            //background: #86b20b;
+            top: 14px;
+            right: 0;
+            position: absolute;
+        }
+        .menu-icon .navicon {
+            background: #fff;
+            display: block;
+            height: 2px;
+            position: relative;
+            transition: background .2s ease-out;
+            width: 20px;
+            float: right;
+        }
+        .menu-icon .navicon:before,
+        .menu-icon .navicon:after {
+            background: #fff;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all 225ms cubic-bezier(0.47, 0.39, 0.25, 1.35);
+            width: 100%;
+        }
+        .menu-icon .navicon:before {
+            top: 5px;
+        }
+        .menu-icon .navicon:after {
+            top: -5px;
+        }
+        input:checked~.menu {
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            transition: all 225ms cubic-bezier(0.47, 0.39, 0.25, 1.35);
+        }
+        .menu-btn:checked~.menu-icon .navicon {
+            background: transparent;
+        }
+        .menu-btn:checked~.menu-icon .navicon:before {
+            transform: rotate(-45deg);
+        }
+        .menu-btn:checked~.menu-icon .navicon:after {
+            transform: rotate(45deg);
+        }
+        .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+        .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+            top: 0;
+        }
+    }
+    //
+    &>ul.menu>li {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        margin-bottom: 0;
+        margin-top: 5px;
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            &:last-child {
+                margin-right: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    &>.menu {
+        padding: 0;
+        font-family: $font-secondary;
+        font-size: 1em;
+        background: #fff;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 225ms cubic-bezier(0.47, 0.39, 0.25, 1.35);
+        text-align: left;
+        margin: 0 0 1rem 1rem;
+        @include breakpoint($bp-medium, $no-query: '.no-mq') {
+            margin: 0;
+            text-align: right;
+            opacity: 1;
+            visibility: visible;
+            display: block;
+            background: none;
+        }
+        @include breakpoint($bp-large, $no-query: '.no-mq') {
+            text-align: right;
+        }
+        li {
+            line-height: 1.3;
+            transition: all .5s ease;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: block;
+            position: relative;
+            @include breakpoint($bp-medium, $no-query: '.no-mq') {
+                display: inline-block;
+                padding: .55em .5em;
+            }
+            @include breakpoint($bp-large, $no-query: '.no-mq') {
+                display: inline-block;
+                padding: .75em .6em;
+            }
+            // @include breakpoint(1200px, $no-query: '.no-mq') {
+            //     padding: .75em 1em;
+            // }
+            a {
+                font-size: 1rem;
+                transition: color .5s ease;
+                padding: 0;
+                display: block;
+                color: #000;
+                text-transform: uppercase;
+                font-weight: 700;
+                &:hover {
+                    color: $color-two;
+                }
+                &:active {
+                    position: relative;
+                }
+                @include breakpoint($bp-medium, $no-query: '.no-mq') {
+                    font-size: .9rem;
+                }
+                // @include breakpoint($bp-large, $no-query: '.no-mq') {
+                //     font-size: .9rem;
+                // }
+            }
+            // Show DropDown Menu
+            &:hover ul {
+                @include breakpoint($bp-medium, $no-query: '.no-mq') {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            // DropDown Menu
+            ul {
+                z-index: 4;
+                padding: 0 0 0 1.5em;
+                opacity: 1;
+                visibility: visible;
+                @include breakpoint($bp-medium, $no-query: '.no-mq') {
+                    padding: .4rem 0;
+                    text-align: right;
+                    right: 16px;
+                    position: absolute;
+                    visibility: hidden;
+                    opacity: 0;
+                    width: 280px;
+                    text-align: right;
+                    background: $color-one;
+                    margin-top: 1px;
+                    transition: all .1s ease-in;
+                    box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.3);
+                    border-radius: 0 0 3px 3px;
+                    li {
+                        margin: 0;
+                        padding: .4em .9em;
+                        display: block;
+                        a {
+                            color: #fff;
+                            font-weight: 400;
+                            &:hover {
+                                color: $color-two;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        a,
+        a:visited {
+            text-decoration: none;
+        }
+    }
+}
