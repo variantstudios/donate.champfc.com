@@ -15,17 +15,31 @@ layout: default
     <div class="subpage clearfix">
         <div class="white-bg">
 
-            <form action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&amount={{page.stripe.price}}&description={{page.stripe.description}}" method="POST">
-                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{page.stripe.public_key}}" data-amount="{{page.stripe.price}}" data-name="CHAMP - Dontation" data-description="{{page.stripe.description}}" data-label="{{page.stripe.button_label}}"
-                    data-zip-code="true" 
-                    data-image="https://stripe.com/img/documentation/checkout/marketplace.png" 
-                    data-locale="auto" 
-                    data-allow-remember-me="false">
+            <form action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&description={{page.stripe.description}}&amount={{page.stripe.price}}" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+                data-key="{{page.stripe.public_key}}" 
+                data-amount="2500" 
+                data-name="CHAMP" 
+                data-description="{{page.stripe.description}}" 
+                data-label="{{page.stripe.button_label}}"
+                data-zip-code="true" 
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png" 
+                data-locale="auto" 
+                data-allow-remember-me="true">
                 </script>
+
                 <div class="u-field-radio-group" data-test="radio-group">
-                <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
-                <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="10">
-                <div class="u-field-radio-group-label RadioGroup-label-11R4u">$10.00</div>
+                    <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="10000">
+                    <span class="u-field-radio-group-label RadioGroup-label-11R4u">$10.00</span>
+
+                    <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="25000" checked>
+                    <span class="u-field-radio-group-label RadioGroup-label-11R4u">$25.00</span>
+
+                    <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="50000">
+                    <span class="u-field-radio-group-label RadioGroup-label-11R4u">$50.00</span>
                 </label>
 
                 </div>
@@ -36,8 +50,3 @@ layout: default
         </div>
     </div>
 </div>
-
-var a = $('#mydiv').data('myval'); //getter
-$('#mydiv').attr("data-myval","20"); //setter
-champ-donate
-brentrobbins-champ-donate.slsgateway.com
