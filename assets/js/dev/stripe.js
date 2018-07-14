@@ -7,12 +7,12 @@ function queryString() {
   }
 }
 if (queryString() == '200') {
-	$('#stripe-message-success').show();
-	$('#stripe-message-fail').hide();
-	$('html, body').animate(
-		{
-			scrollTop: $('.stripe-button-el').offset().top
-		},
+  $('#stripe-message-success').show();
+  $('#stripe-message-fail').hide();
+  $('html, body').animate(
+  {
+    scrollTop: $('.stripe-button-el').offset().top
+	},
 		1000
 	);
 	console.log('200');
@@ -31,3 +31,7 @@ if (queryString() == '200') {
 	$('#stripe-message-fail').hide();
 	console.log('hide');
 }
+
+var a = $('input[name=donationOptions]:checked').val(); //getter
+
+$('.stripe-button').attr("data-amount",a); //setter
