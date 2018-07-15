@@ -875,7 +875,7 @@ body.not-front .footer-wrapper-top .footer-inner .left {
 @media (min-width: 50em) {
   body.front .footer-wrapper-top .footer-inner .left,
   body.not-front .footer-wrapper-top .footer-inner .left {
-    width: 50%;
+    width: 66.66667%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -885,7 +885,7 @@ body.not-front .footer-wrapper-top .footer-inner .left {
 }
 .no-mq body.front .footer-wrapper-top .footer-inner .left, .no-mq
 body.not-front .footer-wrapper-top .footer-inner .left {
-  width: 50%;
+  width: 66.66667%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
@@ -906,7 +906,7 @@ body.not-front .footer-wrapper-top .footer-inner .right a img {
 @media (min-width: 50em) {
   body.front .footer-wrapper-top .footer-inner .right,
   body.not-front .footer-wrapper-top .footer-inner .right {
-    width: 50%;
+    width: 33.33333%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -923,7 +923,7 @@ body.not-front .footer-wrapper-top .footer-inner .right a img {
 }
 .no-mq body.front .footer-wrapper-top .footer-inner .right, .no-mq
 body.not-front .footer-wrapper-top .footer-inner .right {
-  width: 50%;
+  width: 33.33333%;
   float: right;
   margin-left: 0;
   margin-right: 0;
@@ -975,7 +975,7 @@ body.not-front .footer-wrapper-bottom .footer-inner .left {
 @media (min-width: 50em) {
   body.front .footer-wrapper-bottom .footer-inner .left,
   body.not-front .footer-wrapper-bottom .footer-inner .left {
-    width: 50%;
+    width: 66.66667%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -985,7 +985,7 @@ body.not-front .footer-wrapper-bottom .footer-inner .left {
 }
 .no-mq body.front .footer-wrapper-bottom .footer-inner .left, .no-mq
 body.not-front .footer-wrapper-bottom .footer-inner .left {
-  width: 50%;
+  width: 66.66667%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
@@ -1000,7 +1000,7 @@ body.not-front .footer-wrapper-bottom .footer-inner .right {
 @media (min-width: 50em) {
   body.front .footer-wrapper-bottom .footer-inner .right,
   body.not-front .footer-wrapper-bottom .footer-inner .right {
-    width: 50%;
+    width: 33.33333%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -1010,7 +1010,7 @@ body.not-front .footer-wrapper-bottom .footer-inner .right {
 }
 .no-mq body.front .footer-wrapper-bottom .footer-inner .right, .no-mq
 body.not-front .footer-wrapper-bottom .footer-inner .right {
-  width: 50%;
+  width: 33.33333%;
   float: right;
   margin-left: 0;
   margin-right: 0;
@@ -1800,8 +1800,8 @@ body.front .front-hero .front-hero-wrapper img {
   display: block;
   width: 100%;
 }
-body.front .front-hero .front-hero-wrapper h3 {
-  font-family: 'mitr';
+body.front .front-hero .front-hero-wrapper h1 {
+  font-family: 'Teko';
   text-align: center;
   position: absolute;
   bottom: 1.5rem;
@@ -1813,12 +1813,12 @@ body.front .front-hero .front-hero-wrapper h3 {
   margin: 0;
 }
 @media (min-width: 50em) {
-  body.front .front-hero .front-hero-wrapper h3 {
-    font-size: 2.6rem;
+  body.front .front-hero .front-hero-wrapper h1 {
+    font-size: 3rem;
   }
 }
-.no-mq body.front .front-hero .front-hero-wrapper h3 {
-  font-size: 2.6rem;
+.no-mq body.front .front-hero .front-hero-wrapper h1 {
+  font-size: 3rem;
 }
 body.front #site-header {
   background-repeat: no-repeat;

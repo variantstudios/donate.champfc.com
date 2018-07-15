@@ -25,7 +25,7 @@ body.not-front .footer-wrapper-top {
         .left {
             font-size: .8rem;
             @include breakpoint($bp-medium, $no-query: ".no-mq") {
-                @include grid-span(6, 1, $gutter: 0);
+                @include grid-span(8, 1, $gutter: 0);
                 text-align: left;
             }
             text-align: center;
@@ -36,7 +36,7 @@ body.not-front .footer-wrapper-top {
                 transform: scale(.7);
             }
             @include breakpoint($bp-medium, $no-query: ".no-mq") {
-                @include grid-span(6, 7, $gutter: 0);
+                @include grid-span(4, 9, $gutter: 0);
                 margin-top: 0;
                 text-align: right;
                 a img {
@@ -78,7 +78,7 @@ body.not-front .footer-wrapper-bottom {
         .left {
             font-size: .8rem;
             @include breakpoint($bp-medium, $no-query: ".no-mq") {
-                @include grid-span(6, 1, $gutter: 0);
+                @include grid-span(8, 1, $gutter: 0);
                 text-align: left;
             }
             text-align: center;
@@ -86,7 +86,7 @@ body.not-front .footer-wrapper-bottom {
         .right {
             font-size: .8rem;
             @include breakpoint($bp-medium, $no-query: ".no-mq") {
-                @include grid-span(6, 7, $gutter: 0);
+                @include grid-span(4, 9, $gutter: 0);
                 text-align: right;
             }
             text-align: center;
