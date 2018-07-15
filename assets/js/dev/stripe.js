@@ -34,8 +34,7 @@ if (queryString() == '200') {
 
 //var a = $('input[name=donationOptions]:checked').val(); //getter
 
-var a = $('input#donationAmount').val();
-
+var a = $('input#donationAmount').val() + '00';
 $('.stripe-button').attr('data-amount',a); //setter
 
 var formAction = $('#stripeForm').attr('action');
@@ -49,7 +48,7 @@ $('#stripeForm').attr('action', newText);
 //console.log(newText);
 //$( 'input[name=donationOptions]' ).click(function() {
 $('input#donationAmount').blur(function() {
-  var a = $('input#donationAmount').val(); 
+  var a = $('input#donationAmount').val() + '00'; 
   var newText = text.replace(/(amount=).*?(&|$)/,'$1' + a + '$2');
   $('#stripeForm').attr('action', newText);
   $('.stripe-button').attr('data-amount',a);
