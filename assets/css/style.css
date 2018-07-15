@@ -1697,9 +1697,11 @@ body.front .front-hero .front-hero-wrapper img {
 }
 body.front .front-hero .front-hero-wrapper h3 {
   font-family: 'mitr';
+  text-align: center;
   position: absolute;
   bottom: 1.5rem;
   left: 2rem;
+  width: 100%;
   font-size: 1.5rem;
   color: #fff;
   z-index: 1;

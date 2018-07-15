@@ -15,7 +15,12 @@ layout: default
     <div class="subpage clearfix">
         <div class="white-bg">
 
+            <h2>Help CHAMP Raise $20,000.00</h2>
+            <h3>Join this Challenge to match Triple Crown's gift by donating any amount you see fit.</h3>
+
+        <div class="clearfix">
             <form id="stripeForm" action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&description={{page.stripe.description}}&amount={{page.stripe.price}}" method="POST">
+            <div class="clearfix">
                 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
                 data-key="{{page.stripe.public_key}}" 
                 data-amount= 
@@ -27,6 +32,7 @@ layout: default
                 data-locale="auto" 
                 data-allow-remember-me="true">
                 </script>
+            </div>
    
                 <div class="left form-group field-first-name"> <label for="first-name" class="fb-text-label">
                 Donation Amount:</label> 
@@ -60,6 +66,18 @@ layout: default
             </form>
             <div id="stripe-message-success">{{page.stripe.success_message}}</div>
             <div id="stripe-message-fail">{{page.stripe.failure_message}}</div>
+        </div>
+
+            <p>Earlier this year, the highly respected Triple Crown Sports joined forces
+with CHAMP donating $10,000 as a Community Challenge Grant in hopes
+of lighting a spark to raise $20,000 so we may reach even more Fort
+Collins youth and coaches as well as offer new and exciting educational
+opportunities including a Women in Coaching focused workshop.</p>
+
+<div id="centered">
+        <!--add this line to the html where you want the thermometer-->
+        <div id="goal-thermometer"></div>
+    </div>
 
         </div>
     </div>
