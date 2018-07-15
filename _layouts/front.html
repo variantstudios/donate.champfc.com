@@ -27,22 +27,36 @@ layout: default
                 data-locale="auto" 
                 data-allow-remember-me="true">
                 </script>
+   
+                <div class="left form-group field-first-name"> <label for="first-name" class="fb-text-label">
+                Donation Amount:</label> 
+                <div class="input-wrapp">
+                <span class="add-on">$</span>
+                <input  type="text" name="donationAmount" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"  id="donationAmount"  value="50" size="10" maxlength="10" min="0" required="">
+                <span class="add-on">.00</span>
+                </div>
+                </div>
 
-                <div class="u-field-radio-group" data-test="radio-group">
+
+                {% comment %} <div class="u-field-radio-group" data-test="radio-group">
                     <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
-                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="10000">
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="1000">
                     <span class="u-field-radio-group-label RadioGroup-label-11R4u">$10.00</span>
 
                     <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
-                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="25000" checked>
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="2500">
                     <span class="u-field-radio-group-label RadioGroup-label-11R4u">$25.00</span>
 
                     <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
-                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="50000">
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="5000" checked>
                     <span class="u-field-radio-group-label RadioGroup-label-11R4u">$50.00</span>
+
+                    <label class="u-field-radio-group-option RadioGroup-option-1Wah9">
+                    <input class="u-field-radio-group-input" name="donationOptions" type="radio" value="10000">
+                    <span class="u-field-radio-group-label RadioGroup-label-11R4u">$100.00</span>
                 </label>
 
-                </div>
+                </div> {% endcomment %}
             </form>
             <div id="stripe-message-success">{{page.stripe.success_message}}</div>
             <div id="stripe-message-fail">{{page.stripe.failure_message}}</div>
