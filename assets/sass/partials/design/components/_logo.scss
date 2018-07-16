@@ -7,11 +7,11 @@
     img {
         display: block;
         margin: 1rem auto;
-        @include breakpoint($bp-medium, $no-query: '.no-mq') {
-            margin: 0;
-        }
-        @include breakpoint($bp-large, $no-query: '.no-mq') {
-            margin: 0;
-        }
+        // @include breakpoint($bp-medium, $no-query: '.no-mq') {
+        //     margin: 0;
+        // }
+        // @include breakpoint($bp-large, $no-query: '.no-mq') {
+        //     margin: 0;
+        // }
     }
 }

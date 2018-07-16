@@ -16,9 +16,10 @@ header.siteheader {
     .logo {
         //text-align: center;
         // transform: scale(.75);
-        @include breakpoint($bp-medium, $no-query: ".no-mq") {
-            @include grid-span(4, 1, $gutter: 0);
-        }
+        // @include breakpoint($bp-medium, $no-query: ".no-mq") {
+        //     @include grid-span(4, 1, $gutter: 0);
+        // }
+        text-align: center;
     }
     .main-nav {
         width: 100%;
