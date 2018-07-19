@@ -3,8 +3,11 @@ layout: default
 ---
 <div class="front-hero clearfix">
     <div class="front-hero-wrapper clearfix">
+   
         {% for front_hero in page.front_hero %}
         <div class="slide">
+
+        
             <h1>{{front_hero.title}}</h1>
             <img src="{{front_hero.image}}" alt="{{front_hero.title}}">
         </div>
@@ -70,6 +73,9 @@ layout: default
 
             <div class="right">
                 <div id="goal-thermometer"></div>
+                 <div class="site-name logo">
+            <a href="/"><img src="/assets/images/logo.png" alt="{{site.title}}"></a>
+        </div>
             </div>
 
         </div>

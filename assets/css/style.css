@@ -479,6 +479,7 @@ iframe {
 }
 
 .logo {
+  width: initial;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
@@ -1522,6 +1523,8 @@ a.call-to-action:hover {
   color: #000;
   font-weight: bold;
   opacity: 0;
+  margin: 0 auto;
+  width: 175px;
 }
 
 #therm-numbers {
@@ -1757,7 +1760,7 @@ body.front .stripe-button-el {
 }
 @media (min-width: 50em) {
   body.front .left {
-    width: 83.33333%;
+    width: 75%;
     float: left;
     margin-right: -100%;
     margin-left: 0;
@@ -1765,7 +1768,7 @@ body.front .stripe-button-el {
   }
 }
 .no-mq body.front .left {
-  width: 83.33333%;
+  width: 75%;
   float: left;
   margin-right: -100%;
   margin-left: 0;
@@ -1773,7 +1776,7 @@ body.front .stripe-button-el {
 }
 @media (min-width: 50em) {
   body.front .right {
-    width: 16.66667%;
+    width: 25%;
     float: right;
     margin-left: 0;
     margin-right: 0;
@@ -1781,7 +1784,7 @@ body.front .stripe-button-el {
   }
 }
 .no-mq body.front .right {
-  width: 16.66667%;
+  width: 25%;
   float: right;
   margin-left: 0;
   margin-right: 0;
