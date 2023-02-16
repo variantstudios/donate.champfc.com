@@ -1,13 +1,13 @@
---- 
-layout: default 
+---
+layout: default
 ---
 <div class="front-hero clearfix">
     <div class="front-hero-wrapper clearfix">
-   
+
         {% for front_hero in page.front_hero %}
         <div class="slide">
 
-        
+
             <h1>{{front_hero.title}}</h1>
             <img src="{{front_hero.image}}" alt="{{front_hero.title}}">
         </div>
@@ -19,11 +19,14 @@ layout: default
         <div class="white-bg">
 
             <div class="left">
-            <h2>Help CHAMP Raise $20,000.00</h2>
-            <h3>Join this Challenge to match Triple Crown's gift by donating any amount you see fit.</h3>
+                <h2>Help CHAMP Raise $20,000.00</h2>
+                <h3>Join this Challenge to match Triple Crown's gift by donating any amount you see fit.</h3>
 
-            <div class="clearfix">
-                <form id="stripeForm" action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&description={{page.stripe.description}}&amount={{page.stripe.price}}" method="POST">
+                <div class="clearfix">
+                    <a type="submit" class="stripe-button-el" style="visibility: visible;"
+                        href="https://buy.stripe.com/4gw8xea5n8Pv1c46oo" target="_blank"><span
+                            style="display: block; min-height: 30px;">Donate</span></a>
+                    <!-- <form id="stripeForm" action="https://wt-bbb812ec6f1b786e8adf620306562f3c-0.sandbox.auth0-extend.com/champ-donate?currency=USD&description={{page.stripe.description}}&amount={{page.stripe.price}}" method="POST">
                     <div class="clearfix">
                         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key="{{page.stripe.public_key}}" data-amount=d ata-name="CHAMP" data-description="{{page.stripe.description}}" data-label="{{page.stripe.button_label}}" data-zip-code="true"
                             data-image="https://stripe.com/img/documentation/checkout/marketplace.png" data-locale="auto" data-allow-remember-me="true">
@@ -60,22 +63,25 @@ layout: default
                 </label>
 
                     </div> {% endcomment %}
-                </form>
+                </form> -->
 
-            </div>
+                </div>
 
-            <div id="stripe-message-success" class="success">{{page.stripe.success_message}}</div>
-            <div id="stripe-message-fail" class="error">{{page.stripe.failure_message}}</div>
-            <p>Earlier this year, the highly respected Triple Crown Sports joined forces with CHAMP donating $10,000 as a Community Challenge Grant in hopes of lighting a spark to raise $20,000 so we may reach even more Fort Collins youth and coaches as
-                well as offer new and exciting educational opportunities including a Women in Coaching focused workshop.</p>
+                <div id="stripe-message-success" class="success">{{page.stripe.success_message}}</div>
+                <div id="stripe-message-fail" class="error">{{page.stripe.failure_message}}</div>
+                <p>Earlier this year, the highly respected Triple Crown Sports joined forces with CHAMP donating $10,000
+                    as a Community Challenge Grant in hopes of lighting a spark to raise $20,000 so we may reach even
+                    more Fort Collins youth and coaches as
+                    well as offer new and exciting educational opportunities including a Women in Coaching focused
+                    workshop.</p>
 
             </div>
 
             <div class="right">
                 <div id="goal-thermometer"></div>
-                 <div class="site-name logo">
-            <a href="/"><img src="/assets/images/logo.png" alt="{{site.title}}"></a>
-        </div>
+                <div class="site-name logo">
+                    <a href="/"><img src="/assets/images/logo.png" alt="{{site.title}}"></a>
+                </div>
             </div>
 
         </div>
